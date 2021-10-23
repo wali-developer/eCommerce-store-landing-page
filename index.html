@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS</title>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/8441000675.js" crossorigin="anonymous"></script>
+   
+    <!-- css -->
+    <link rel="stylesheet" href="sass/main.css">
+</head>
+<body>
+    <!-- Top bar -->
+    <div id="top" class="padd">
+        <div class="top-col">
+            <span class="top-bold">ENG</span> &nbsp;
+            <span>IND</span>
+        </div>
+        <div class="top-col">
+            <span class="top-bold">USD</span> &nbsp;
+            <span>IDR</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="container">
+        <div id="header">
+            <div id="header-first">
+                <div class="col-3">
+                    <div class="text-icon">
+                        <i class="far fa-user"></i> &nbsp;
+                        Hello you can login or <span id="register">Register</span>
+                    </div>
+                    <div class="text-icon">
+                        <i class="fas fa-phone-alt"></i> &nbsp;
+                        Customer Service : +92 385674367
+                    </div>
+                    <div>
+                        <form action="#">
+                            <input type="search" placeholder="Search">
+                            <i class="fas fa-search"></i>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img src="images/logo.svg" alt="Logo">
+                    <!--<div class="logo">
+                        <h4>Your Logo</h4>
+                        <p>ECOMMERCE</p>
+                    </div>-->
+                </div>
+                <div class="col-3" id="col-2">
+                    <div class="column-2">
+                        <span class="border-bottom">
+                            <i class="far fa-heart"></i>&nbsp; WISHLIST : 4
+                        </span>
+                        <div class="image-text">
+                            <span class="image">50 * 50</span>
+                            <span>
+                                <h5>FLAT SHOWS</h5> 
+                                <p>$189.00</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="column-2">
+                        <span class="border-bottom">
+                            <i class="fas fa-shopping-cart"><span class="badge">2</span></i>&nbsp; SHOPING CARD : <span class="red-txt">$345.00</span>
+                        </span>
+                        <div class="image-text">
+                            <span class="image">50 * 50</span>
+                            <span>
+                                <h5>HOT PANT</h5> 
+                                <p>$156.00</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btns">
+                <a href="#" id="btn-1"><i class="fas fa-plus"></i> SHOW ALL PRODUCTS</a>
+                <a href="#" id="btn"> <i class="fas fa-shopping-cart"></i> CHECK OUT</a>
+            </div>
+        </div>
+
+        <!-- main menu -->
+        <nav id="navbar">
+            <ul>
+                <li><a href="javascript:void(0);" onclick="myFunction()"><i class="fas fa-times-circle"></i></a></li>
+                <li><a href="">jacket</a></li>
+                <li><a href="">sweater</a></li>
+                <li><a href="">dresses</a></li>
+                <li><a href="">skirts</a></li>
+                <li><a href="">paints</a></li>
+                <li><a href="">shirts</a></li>
+                <li><a href="">shoes</a></li>
+                <li><a href="">accessories</a></li>
+            </ul>
+        </nav>
+        <div id="bar" onclick="myFunction()"><i class="fas fa-bars"></i> Menu</div>
+        <hr>
+
+        <!-- Products Image Gallery  -->
+        <div class="grid-container">
+            <div class="grid-item item1">
+                <img src="images/pic-1.png">
+                <div class="content">
+                    <h3>MAY <br> <span>Collection</span></h3>
+                    <button>See Products</button>
+                </div>
+            </div>
+            <div class="grid-item item2">
+                <img src="images/pic-2.png">
+            </div>
+            <div class="grid-item item3">
+                <img src="images/pic-3.png">
+                <div class="content">
+                    <h2><span>NEW</span> <br> Arrivals</h2>
+                    <button>See Products</button>
+                </div>
+            </div>  
+            <div class="grid-item item4">
+                <img src="images/pic-4.png">
+            </div>
+            <div class="grid-item item5">
+                <img src="images/pic-5.png">
+            </div>
+        </div> 
+
+        <!-- Featured / Arriavls Product Gallery -->
+        <div class="gallery-container">
+            <div class="dropdown">
+                <button class="drop-btn drop-btn-1"  onclick="display()">featured <i class="fas fa-caret-down"></i></button>
+                <div class="dropdown-content" id="dropdown-cont">
+                    <a href="#">Dropdown-1</a>
+                    <a href="#">Dropdown-2</a>
+                    <a href="#">Dropdown-3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="drop-btn drop-btn-2" onclick="display()">Arriavals <i class="fas fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#">Dropdown-1</a>
+                    <a href="#">Dropdown-2</a>
+                    <a href="#">Dropdown-3</a>
+                </div>
+            </div>
+            <p>Who ever said can't buy happiness simply did not know WHERE to SHOP</p>
+            <div class="product-gallery">
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-1.png" alt="Blazer Slimfit">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <a class="detail-btn">detail</a>
+                        <h4>Blazer Slimfit</h4>
+                        <p>$289.00</p>
+                        <a class="addToCart-btn">Add to cart</a>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-2.png" alt="Slim Paint">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <a class="detail-btn">detail</a>
+                        <h4>Slim Paint</h4>
+                        <p><span>329.00</span> $289.00</p>
+                        <a class="addToCart-btn">Add to cart</a>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-3.png" alt="Sweetshirts">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <a class="detail-btn">detail</a>
+                        <h4>Sweetshirts</h4>
+                        <p>$289.00</p>
+                        <a class="addToCart-btn">Add to cart</a>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-4.png" alt="Formal Blosee">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <a class="detail-btn">detail</a>
+                        <h4>Formal Blosee</h4>
+                        <p>$289.00</p>
+                        <a class="addToCart-btn">Add to cart</a>
+                    </div>
+                </div> 
+
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-5.png" alt="Blazer Slimfit">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <a class="detail-btn">detail</a>
+                        <h4>Blazer Slimfit</h4>
+                        <p>$289.00</p>
+                        <a class="addToCart-btn">Add to cart</a>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-6.png" alt="Slim Paint">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <a class="detail-btn">detail</a>
+                        <h4>Slim Paint</h4>
+                        <p><span>320.00</span>$289.00</p>
+                        <a class="addToCart-btn">Add to cart</a>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-7.png" alt="Sweetshirts">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <a class="detail-btn">detail</a>
+                        <h4>Sweetshirts</h4>
+                        <p>$289.00</p>
+                        <a class="addToCart-btn">Add to cart</a>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-8.png" alt="Formal Blosee">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <a class="detail-btn">detail</a>
+                        <h4>Formal Blosee</h4>
+                        <p>$289.00</p>
+                        <a class="addToCart-btn">Add to cart</a>
+                    </div>
+                </div> 
+            </div>
+            <span class="more-products">
+                <i class="fas fa-plus"></i> load more products
+            </span>
+        </div>
+    </div>
+
+    <!-- Category -->
+    <div class="category">
+        <h1>category</h1>
+        <nav>
+            <ul>
+                <li><a href="">jacket</a></li>
+                <li><a href="">skirts</a></li>
+                <li><a href="">paints</a></li>
+                <li><a href="">T-shirts</a></li>
+                <li><a href="">shoes</a></li>
+                <li><a href="">accessories</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Lastest Viewed Picture Gallery -->
+    <div class="container2">
+        <div class="lastest-viewed">
+            <h1>Lastest Viewed</h1>
+            <div class="product-gallery">
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-9.png" alt="Blazer Slimfit">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <h4>Blazer Slimfit</h4>
+                        <p>$289.00</p>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-10.png" alt="Blazer Slimfit">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <h4>Blazer Slimfit</h4>
+                        <p>$289.00</p>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-11.png" alt="Blazer Slimfit">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <h4>Blazer Slimfit</h4>
+                        <p>$289.00</p>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-12.png" alt="Blazer Slimfit">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <h4>Blazer Slimfit</h4>
+                        <p>$289.00</p>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <a href="#" target="_blank">
+                        <img src="images/product-13.png" alt="Blazer Slimfit">
+                        <hr>
+                    </a>
+                    <div class="disc">
+                        <h4>Blazer Slimfit</h4>
+                        <p>$289.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr id="footer-hr">
+    <div class="footer-logo">
+        <!--<div class="logo">
+            <h4>Your Logo</h4>
+            <p>ECOMMERCE</p>
+        </div>-->
+        <img src="images/logo2.svg" alt="Footer Logo">
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <div id="row">
+            <div class="col-4">
+                <h4>Connect with us</h4>
+                <h6>Davelynanc-ecommerce</h6>
+                <p>
+                    <span>Kaben Jeruk, Jakarta, ID</span> <br>
+                    <span>+92 30848384</span> <br>
+                    <span>fasionholic@gmail.com</span>
+                </p>
+                <div class="social">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fas fa-globe"></i>
+                    <i class="fab fa-google-plus-g"></i>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <h4>Holiday Sales</h4>
+                <div class="row">
+                    <div class="first-col-6">
+                        <span>75 * 75</span>
+                    </div>
+                    <div class="second-col-6">
+                        <h6>Channel - Fashion Bag <br> <span>$189.00 </span></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="first-col-6">
+                        <span class="image-shap">75 * 75</span>
+                    </div>
+                    <div class="second-col-6">
+                        <h6>Channel - Fashion Bag <br> <span>$189.00 </span></h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <h4>New Arrivals</h4>
+                <div class="row">
+                    <div class="first-col-6">
+                        <span class="image-shap">75 * 75</span>
+                    </div>
+                    <div class="second-col-6">
+                        <h6>Calvin Klein - Low Slim Jeans <br> <span>$189.00 </span></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="first-col-6">
+                        <span class="image-shap">75 * 75</span>
+                    </div>
+                    <div class="second-col-6">
+                        <h6>Vectorias - Lingeries <br> <span>$189.00 </span></h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <h4>Our Support</h4>
+                <p>
+                    <span>- Term and Condition</span> <br>
+                    <span>- Delivery</span> <br>
+                    <span>- Secure Paments</span> <br>
+                    <span>- Refunds</span> <br>
+                    <span>- Track Orders</span>
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

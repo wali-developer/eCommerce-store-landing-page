@@ -1,0 +1,226 @@
+@import "variables";
+@mixin container {
+    width: $container-width;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@mixin display-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@mixin logo {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+}
+
+@mixin logo-h4 {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0;
+    line-height: 0.5;
+    padding-top: 55px;
+    font-family: 'Josefin Sans';
+    letter-spacing: 1px;
+}
+@mixin logo-para {
+    font-size: 12px;
+    text-align: center;
+    line-height: 0;
+}
+
+@mixin list-item {
+    display: inline-block;
+    padding: 0 20px;
+    padding-top: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+@mixin heading-1 {
+    color: $heading-color;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@mixin head-4 {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 0;
+    color: $heading-color;
+    letter-spacing: 1px;
+}
+
+@mixin head-6 {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $heading-color;
+    letter-spacing: 1px;
+
+}
+
+@mixin gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 24%; 
+    box-sizing: border-box;
+    transition: ease-in-out 0.3s;
+    border: none;
+}
+
+@mixin gallery-hover {
+    outline: auto;
+    border: 10px solid $primary-color;
+    transform: scaleY(1.1);
+}
+
+@mixin image-hr {
+    width: 30px;
+    margin: 0 auto;
+    border: none;
+    background-color: gray;
+    height: 1px;
+}
+
+@mixin button {
+    padding: 7px 35px;
+    text-transform: uppercase;
+    background-color: $primary-color;
+    color: white;
+    outline: none;
+    border: none;
+}
+/*mixin button{
+
+}*/
+
+//=== Media Queries ===
+@mixin small-screen() {
+    @media only screen and (max-width: 490px){
+      @content;
+    }
+}
+
+@mixin small-medium-screen() {
+    @media only screen and (max-width: 660px){
+      @content;
+    }
+}
+@mixin medium-screen() {
+    @media only screen and (max-width: 850px){
+      @content;
+    }
+}
+  
+@mixin large-screen() {
+    @media only screen and (max-width: 1170px){
+      @content;
+    }
+}
+  
+@mixin xlarge-screen() {
+    @media only screen and (max-width: 1400px){
+      @content;
+    }
+}
+@mixin link {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+@mixin Grid-Responsive {
+    .item1 {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+
+        @include medium-screen(){
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+        @include small-screen(){
+            grid-column: 1;
+          
+            grid-row: 1 / 2;
+        }
+        .content{
+            margin-top: 170px;
+            h3{
+                font-weight: bolder;
+                font-size: 25px;
+                letter-spacing: 2px;
+                line-height: 0.8;
+                span{
+                    font-weight: lighter;
+                    font-size: 19px;
+                    letter-spacing: 5px;
+                }
+            }
+        }
+    } 
+      
+    .item2 {
+        grid-column: 2 / span 3;
+        grid-row: 1;
+
+        @include medium-screen(){
+            grid-column: 3 / 6;
+            grid-row: 1;
+        }
+        @include small-screen(){
+            grid-column: 1;
+            grid-row: 2 / 3;
+        }
+      }
+    .item-3{
+        grid-column: 3;
+        grid-row: 1;
+
+        @include medium-screen(){
+            grid-column: 5 / 6;
+            grid-row: 3;
+        }
+        @include small-screen(){
+            grid-column: 1;
+            grid-row: 3 / 4;
+        }
+       
+        
+    }
+    .item4{
+        grid-column: 2;
+        grid-row: 2;
+
+        @include medium-screen(){
+            grid-column: 3 / 6;
+            grid-row: 2;
+        }
+        @include small-screen(){
+            grid-column: 1;
+            grid-row: 4 / 5;
+        }
+    }
+      
+    .item5 {
+        grid-column: 3 / span 4;
+        grid-row: 2;
+
+        @include medium-screen(){
+            grid-column: 1 / 5;
+            grid-row: 3;
+        }
+        @include small-screen(){
+            grid-column: 1;
+            grid-row: 5 / 6;
+        }
+    }
+}
